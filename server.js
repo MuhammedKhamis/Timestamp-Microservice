@@ -34,7 +34,7 @@ app.get("/:date", function (request, response) {
      result.unix = date.getTime()/1000;
      result.natural = strftime("%B %d, %Y", date);
   }
-  var result = JSON.stringify(result);
+  var result = '<pre>' + JSON.stringify(result) + '</pre>';
   response.send(result);
   
 });
